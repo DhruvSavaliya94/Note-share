@@ -1,0 +1,13 @@
+Flask
+Flask-SQLAlchemy
+Flask-Bcrypt
+Flask-Login
+Flask-Mail
+Flask-WTF
+WTForms
+itsdangerous
+Jinja2
+Pillow
+psycopg2
+psycopg2-binary
+email-validator

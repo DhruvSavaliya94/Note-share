@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="col-md-8 col-pl-16">
+        <h5 class="text-muted mb-3">Notes by <span class="text-dark">{{ user.username }} ({{ notes.total }})</span></h5>
+        {% for note in notes.items %}
+            <div class="card mb-md-2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-2 pr-0" style="max-width: 11.5%; padding-top: 1%; padding-left: 2.5%;">
+                            <div class="note-header">
+                                <img class="rounded-circle note-author-img" src="{{ url_for('static', filename='Profile-pictures/' + note.author.image_file) }}" alt="Author's Profile-photo">
+                            </div>
+                        </div>
+                        <div class="col-md-10 pl-0 pr-0" style="max-width: 88.5%;">
+                            <div class="note-header">
+                                <a class="anchor-note-username" href="{{ url_for('notes.user_notes', username=note.author.username) }}">
+                                    <strong>{{ note.author.username }}</strong>
+                                    <div  class="text-muted mb-1" style="font-size: 85%;">
+                                        Posted on {{ note.date_posted.strftime('%Y-%m-%d') }}
+                                    </div>
+                                    <div class="border-bottom mb-3"></div>
+                                </a>
+                                <a class="anchor-note-update" href="{{ url_for('notes.note', note_id=note.id) }}">
+                                        <h5 class="card-title note-title">{{ note.title }}</h5>
+                                </a>
+                                <p style="white-space: pre-line; font-size: 79%;">{{ note.content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-header note-action">
+                                <a class="note-action-btn" href="{{ url_for('notes.up_note', note_id=note.id, from_page=url_for('notes.user_notes', username=note.author.username)) }}"><img src="{{ url_for('static', filename='Icons/arrow-up.svg') }}" alt="Like"> {{ note.ups }} </a>
+                                <a class="note-action-btn" href="{{ url_for('notes.down_note', note_id=note.id, from_page=url_for('notes.user_notes', username=note.author.username)) }}"><img src="{{ url_for('static', filename='Icons/arrow-down.svg') }}" alt="Dislike"> {{ note.downs }} </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% for page_num in notes.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+                {% if notes.page == page_num %}
+                    <a class="btn btn-info mb-4" href="{{ url_for('notes.user_notes', username=user.username, page=page_num) }}">{{ page_num }}</a>
+                {% else %}
+                    <a class="btn btn-outline-info mb-4" href="{{ url_for('notes.user_notes', username=user.username, page=page_num) }}">{{ page_num }}</a>
+                {% endif %}
+            {% else %}
+                ...
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="col-md-4 col-pr-16">
+        <div class="card">
+                <div class="card-header" style="font-size: 18px;"><strong>Jump to...</strong></div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="#" class="sidebar-link">Latest notes</a></li>
+                    <li class="list-group-item"><a href="#" class="sidebar-link">Earlier notes</a></li>
+                    <li class="list-group-item"><a href="#" class="sidebar-link">Top notes</a></li>
+                </ul>
+        </div>
+    </div>
+{% endblock content %}

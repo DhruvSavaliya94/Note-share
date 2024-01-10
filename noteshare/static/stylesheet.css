@@ -1,0 +1,308 @@
+.inverted-img {
+    filter: brightness(0) invert(1);
+}
+
+.username-text {
+    font-size: 200%;
+    font-weight: 410;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.email-text {
+    font-size: 140%;
+    font-weight: 300;
+    margin-top: 1%;
+    margin-left: 5%;
+}
+
+.navbar.bg-light {
+    width: 100%;
+    background: linear-gradient(to right, #ffcce6, #fff0b3, #ccf2ff)!important;
+}
+
+/* Manual color for navbar-brand, activated nav-link and nav-link's focused state */
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link:focus {
+    font-size: 16px;
+}
+
+.navbar-light .navbar-brand {
+    font-size: 22px;
+}
+
+.navbar-light .margin-left {
+    padding-left: 16%;
+}
+
+.note-action {
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-bottom: none;
+    padding: 1%;
+    background-color: #fff;
+}
+
+.register-card {
+    padding: 1% 2%;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.note-action-btn, .note-action-btn:hover {
+    margin-right: 2%;
+    text-decoration: none;
+    color: #000;
+}
+
+.margin-right {
+    padding-right: 16%;
+}
+
+.col-pl-16 {
+    padding-top: 1%;
+    padding-left: 16%;
+}
+
+.col-pr-16 {
+    padding-top: 1%;
+    padding-right: 16%;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar-link:hover {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* For changing default hovering effect color from #000 to #fff */
+.navbar-light .navbar-nav .nav-link:hover {
+    font-weight: 600;
+}
+
+/* Hovering efect for navbar-brand */
+.navbar-light .navbar-brand:hover{
+    font-weight: 500;
+}
+
+.border {
+    padding: 0px 10px;
+    border: 1px solid!important;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-custom-header {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.note-header {
+    font-size: 120%;
+    font-weight: 350;
+}
+
+.note-title {
+    font-size: 170%;
+    font-weight: 500;
+}
+
+/* Image section */
+.note-header-img {
+    width: 10%;
+}
+
+.note-author-img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 45px;
+    width: 45px;
+}
+
+.profile-picture {
+    height: 125px;
+    width: 125px;
+}
+
+/* Buttons */
+.btn-dropdown:hover {
+    color: #6c757d;
+    background-color: transparent;
+}
+
+.anchor-note-update {
+    text-decoration: none;
+    color: #000;
+    font-size: 70%;
+}
+
+.anchor-note-update:hover {
+    text-decoration: none;
+}
+
+.anchor-note-username {
+    text-decoration: none;
+    color: #000;
+    font-size: 90%;
+}
+
+.anchor-note-username:hover {
+    text-decoration: none;
+}
+
+.card-body {
+    padding: 1% 2% 1% 2%;
+}
+
+.action-btns {
+    padding-top: 2%;
+}
+
+.profile-dropdown {
+    height: 33px;
+    width: 33px;
+}
+
+.profile-dropdown:hover {
+    height: 37px;
+    width: 37px;
+    border: 2px solid #9999ff;
+}
+
+.brand-logo {
+    width: 130px;
+    height: 14%;
+}
+
+.brand-logo-embadded {
+    width: 180px;
+    height: 20%;
+}
+
+.content-center {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    align-content: center;
+}
+
+.background-picture {
+    background-image: url("./Icons/sticky-notes.jpg");
+    -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(20%);
+}
+
+.text-tagline {
+    font-size: 250%;
+}
+
+.text-para {
+    padding-left: 15%;
+    text-align: left;
+    font-size: 50%;
+    color: #000;
+}
+
+.text-content {
+    padding-top: 2%;
+    font-size: 200%;
+}
+
+.text-heading {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 150%;
+}
+
+.gif-head {
+    width: 100%;
+    height: 100%;
+}
+
+/**************************** Dropdown Menu ******************************/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a, .dropdown-content span {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover, .dropdown-content span:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/**********************************************************/
+
+/****************************     Keyur Ranpariya     *****************************/
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+  }
+
+
+.column {
+    flex: 25%;
+    max-width: 23%;
+    margin-left: 2%;
+    padding: 0px 10px;
+    min-height: 380px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px; 
+    margin-bottom: 10px;
+  }
+
+  .column:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.80);
+    transition: all 0.3s ease;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 50%; 
+  }
+
+  .content-center p{
+    font-size: 17px;
+}
+
+@media screen and (max-width: 800px) {
+    .column{
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+/*********************************************************/
